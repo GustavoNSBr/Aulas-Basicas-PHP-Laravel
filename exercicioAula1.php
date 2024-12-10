@@ -7,10 +7,10 @@ $produtos = [
     ['nome' => 'Mussarela', 'desconto' => 0, 'preco' => '9.15'],
 ];
 
-$porcentagemDesconto = $produto['desconto'] * 100;
-
 foreach ($produtos as $produto) {
 
+    $porcentagemDesconto = $produto['desconto'] * 100;
+    
     if ($porcentagemDesconto >= 30) {
         echo "O Produto " . $produto['nome'] . " esta com um bom desconto, custando " . $produto['preco'] . "\n\n";
 

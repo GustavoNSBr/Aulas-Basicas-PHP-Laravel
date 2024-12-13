@@ -9,8 +9,8 @@
             margin: 20px;
         }
         table {
-            width: 100%;
-            margin-top: 20px;
+            width: 50%;
+            margin: 0 auto;
             border-collapse: collapse;
         }
         table, th, td {

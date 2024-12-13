@@ -46,6 +46,7 @@
                 <th>Nome</th>
                 <th>% Desconto</th>
                 <th>Valor</th>
+                <th>Valor com Desconto</th>
             </tr>
         </thead>
         <tbody>
@@ -53,11 +54,13 @@
             $totalDesconto = 0; // Variável para calcular o total de descontos
             foreach ($produtos as $produto) {
                 $valorDesconto = ($produto['desconto'] * $produto['preco']) / 100;
+                $precoComDesconto = $produto['preco'] - $valorDesconto;
 
                 echo "<tr>
                         <td>{$produto['nome']}</td>
                         <td>" . number_format($produto['desconto'], 1, ',', '.') . "%</td>
                         <td>{$produto['preco']}</td>
+                        <td>" . number_format($precoComDesconto, 2, ',', '.') . "</td>
                       </tr>";
             }
             ?>
